@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type="search"] {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+input[type="search"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary {
+    margin-bottom: 20px;
+}
+
+/* Bảng dữ liệu */
+#dataTable {
+    border-collapse: collapse;
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#dataTable thead tr {
+    background: linear-gradient(to right, #3b82f6, #06b6d4);
+    color: white;
+    border: none;
+}
+
+#dataTable thead th {
+    font-size: 14px;
+    text-align: center;
+}
+
+#dataTable tbody tr {
+    transition:
+        background-color 0.3s,
+        transform 0.2s;
+}
+
+#dataTable tbody td {
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+#dataTable tbody tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+#dataTable tbody tr:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.02);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#dataTable .btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    transition:
+        background-color 0.3s,
+        transform 0.2s;
+}
+
+#dataTable .btn-success:hover {
+    background-color: #22c55e;
+}
+
+#dataTable .btn-warning:hover {
+    background-color: #f59e0b;
+}
+
+#dataTable .btn-danger:hover {
+    background-color: #dc2626;
+}
+
+#dataTable .btn:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Thông tin chi tiết */
+.content-info-container {
+    width: 100%;
+    padding: 20px;
+    background: #f7f9fc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.content-info-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.content-info-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-info-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.content-info-card p strong {
+    color: #333;
+}
+
+/* Thêm thông tin */
+.table-bordered h3 {
+    color: red !important;
+}
