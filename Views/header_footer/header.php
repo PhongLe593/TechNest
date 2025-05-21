@@ -20,13 +20,13 @@
                         </div>
                         <ul class="account-dropdown bg-white shadow-sm rounded p-2">
                             <?php if (isset($_SESSION['login'])) { ?>
-                                <li class="py-2 border-bottom"><strong><i class="mdi mdi-account-circle me-2"></i><?= $_SESSION['login']['Ho'] ?> <?= $_SESSION['login']['Ten'] ?></strong></li>
+                                <li class="py-2 border-bottom"><strong><?= $_SESSION['login']['Ho'] ?> <?= $_SESSION['login']['Ten'] ?></strong></li>
                                 <?php if (isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])) { ?>
-                                    <li class="py-2"><a href="admin/?mod=login" class="text-dark"><i class="mdi mdi-cog me-2"></i>Trang quản lý</a></li>
+                                    <li class="py-2"><a href="admin/?mod=login" class="text-dark">Trang quản lý</a></li>
                                 <?php } ?>
-                                <li class="py-2"><a href="?act=taikhoan&xuli=account" class="text-dark"><i class="mdi mdi-account-edit me-2"></i>Tài khoản</a></li>
-                                <li class="py-2"><a href="?act=order_history" class="text-dark"><i class="mdi mdi-package-variant me-2"></i>Đơn hàng</a></li>
-                                <li class="py-2"><a href="?act=taikhoan&xuli=dangxuat" class="text-dark"><i class="mdi mdi-logout me-2"></i>Đăng xuất</a></li>
+                                <li class="py-2"><a href="?act=taikhoan&xuli=account" class="text-dark">Tài khoản</a></li>
+                                <li class="py-2"><a href="?act=order_history" class="text-dark">Đơn hàng</a></li>
+                                <li class="py-2"><a href="?act=taikhoan&xuli=dangxuat" class="text-dark">Đăng xuất</a></li>
                             <?php } else { ?>
                                 <li class="py-2"><a href="?act=taikhoan" class="text-dark"><i class="mdi mdi-login me-2"></i>Đăng nhập</a></li>
                             <?php } ?>
@@ -57,7 +57,7 @@
                                         foreach ($data_chitietDM as $row) { ?>
                                             <li>
                                                 <a href="?act=shop&sp=<?= $i ?>" class="text-dark">
-                                                    <h5><i class="mdi mdi-folder me-2"></i> <?= $data_danhmuc[$i - 1]['TenDM'] ?></h5>
+                                                    <h4><i class="mdi mdi-folder me-2"></i> <?= $data_danhmuc[$i - 1]['TenDM'] ?></h5>
                                                 </a>
                                                 <ul>
                                                     <?php foreach ($row as $value) { ?>
@@ -87,7 +87,7 @@
                                             foreach ($data_chitietDM as $row) { ?>
                                                 <li>
                                                     <a href="?act=shop&sp=<?= $i ?>" class="text-dark">
-                                                        <h5><i class="mdi mdi-folder me-2"></i><?= $data_danhmuc[$i - 1]['TenDM'] ?></h5>
+                                                        <h4><i class="mdi mdi-folder me-2"></i><?= $data_danhmuc[$i - 1]['TenDM'] ?></h5>
                                                     </a>
                                                     <ul>
                                                         <?php foreach ($row as $value) { ?>

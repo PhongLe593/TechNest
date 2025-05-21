@@ -265,7 +265,7 @@ require_once("banner.php")
                     </div>
                     <div class="colect-text">
                         <h4><a href="?act=detail&id=<?= $data_random[1]['MaSP'] ?>"><?= $data_random[1]['TenSP'] ?></a></h4>
-                        <h5>Giá: <?= number_format($data_random[1]['DonGia'] ?? 0) ?> VNĐ</h5>
+                        <h4>Giá: <?= number_format($data_random[1]['DonGia'] ?? 0) ?> VNĐ</h5>
                         <a href="?act=detail&id=<?= $data_random[1]['MaSP'] ?>">Mua ngay <i class="mdi mdi-arrow-right"></i></a>
                     </div>
                 <?php else: ?>
@@ -282,7 +282,7 @@ require_once("banner.php")
             <div class="col-xs-12">
                 <div class="section-title text-center">
                     <div class="product-tab nav nav-tabs">
-                        <h2>Sản phẩm nổi bật</h2>
+                        <h2>Sản phẩm mới nhất</h2>
                     </div>
                 </div>
             </div>

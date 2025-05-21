@@ -12,7 +12,7 @@
                                 <ul class="list-unstyled">
                                     <li class="mb-3">
                                         <i class="mdi mdi-map-marker text-primary me-2"></i>
-                                        <p class="mb-0">Hà Đông, Hà Nội</p>
+                                        <p class="mb-0">Cầu Diễn, Hà Nội</p>
                                     </li>
                                     <li class="mb-3">
                                         <i class="mdi mdi-phone text-primary me-2"></i>
@@ -22,7 +22,7 @@
                                     <li class="mb-3">
                                         <i class="mdi mdi-email text-primary me-2"></i>
                                         <p class="mb-0">technest@gmail.com</p>
-                                        <p class="mb-0">technest@.etu.vn</p>
+                                        <p class="mb-0">technest@.com.vn</p>
                                     </li>
                                 </ul>
                             </div>

@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="single-list-view">
-                    <div class="col-xs-12 col-sm-5 col-md-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="quick-image">
                             <div class="single-quick-image text-center">
                                 <div class="list-img">
@@ -49,98 +49,95 @@
                                     <?php } ?>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-7 col-md-8">
-                        <div class="quick-right">
-                            <div class="list-text">
-                                <h3><?= $data['TenSP'] ?></h3>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="list-text">
+                            <h3><?= $data['TenSP'] ?></h3>
 
-                                <!-- Thêm thông tin thương hiệu và chi tiết sản phẩm -->
-                                <div class="product-meta">
-                                    <?php if (isset($data['ThuongHieu'])) : ?>
-                                        <div class="product-brand">
-                                            <span>Thương hiệu:</span> <strong><?= $data['ThuongHieu'] ?? 'Chưa cập nhật' ?></strong>
-                                        </div>
-                                    <?php endif; ?>
-                                    <!-- Hiển thị mã sản phẩm -->
-                                    <div class="product-sku">
-                                        <span>Mã sản phẩm:</span> <?= $data['MaSP'] ?>
+                            <!-- Thêm thông tin thương hiệu và chi tiết sản phẩm -->
+                            <div class="product-meta">
+                                <?php if (isset($data['ThuongHieu'])) : ?>
+                                    <div class="product-brand">
+                                        <span>Thương hiệu:</span> <strong><?= $data['ThuongHieu'] ?? 'Chưa cập nhật' ?></strong>
                                     </div>
-                                    <!-- Tình trạng còn/hết hàng -->
-                                    <div class="product-stock">
-                                        <span>Tình trạng:</span>
-                                        <?php if (isset($data['SoLuong']) && $data['SoLuong'] > 0) : ?>
-                                            <span class="in-stock"><i class="fas fa-check-circle"></i> Còn hàng</span>
-                                        <?php else : ?>
-                                            <span class="out-of-stock"><i class="fas fa-times-circle"></i> Hết hàng</span>
-                                        <?php endif; ?>
-                                    </div>
-                                    <div class="product-stock">
-                                        <span>Số lượng sản phẩm trong kho:</span>
-                                        <span class="in-stock"><i class="fas fa-check-circle"></i> <?= $data['SoLuong'] ?></span>
-                                    </div>
+                                <?php endif; ?>
+                                <!-- Hiển thị mã sản phẩm -->
+                                <div class="product-sku">
+                                    <span>Mã sản phẩm:</span> <?= $data['MaSP'] ?>
                                 </div>
-
-                                <?php
-                                if (isset($data['MaKM'])) {
-                                    require_once("Models/cart.php");
-                                    $cartModel = new Cart();
-                                    $promotion = $cartModel->get_promotion($data['MaKM']);
-                                    $discountValue = isset($promotion['GiaTriKM']) ? $promotion['GiaTriKM'] : 0;
-                                    $discountedPrice = $data['DonGia'] - $discountValue;
-                                } else {
-                                    $discountValue = 0;
-                                    $discountedPrice = $data['DonGia'];
-                                }
-                                ?>
-                                <div class="product-price">
-                                    <?php if ($discountValue > 0) : ?>
-                                        <h5 class="current-price"><?= number_format($discountedPrice) ?> VNĐ</h5>
-                                        <p class="original-price"><del><?= number_format($data['DonGia']) ?> VNĐ</del></p>
-                                        <span class="discount-badge">
-                                            -<?= round(($discountValue / $data['DonGia']) * 100) ?>%
-                                        </span>
-                                        <p class="promotion-name"><?= isset($promotion['TenKM']) ? $promotion['TenKM'] : '' ?></p>
+                                <!-- Tình trạng còn/hết hàng -->
+                                <div class="product-stock">
+                                    <span>Tình trạng:</span>
+                                    <?php if (isset($data['SoLuong']) && $data['SoLuong'] > 0) : ?>
+                                        <span class="in-stock"><i class="fas fa-check-circle"></i> Còn hàng</span>
                                     <?php else : ?>
-                                        <h5><?= number_format($data['DonGia']) ?> VNĐ</h5>
+                                        <span class="out-of-stock"><i class="fas fa-times-circle"></i> Hết hàng</span>
                                     <?php endif; ?>
                                 </div>
-                                <div class="product-commnit">
-                                    <div class="header">TechNest cam kết</div>
-                                    <div class="item">
-                                        <i class="fas fa-box"></i>
-                                        <p>Bộ sản phẩm gồm: Hộp, sách hướng dẫn, cây lấy sim, ốp lưng, cáp sạc, củ sạc nhanh</p>
-                                    </div>
-                                    <div class="item">
-                                        <i class="fas fa-sync-alt"></i>
-                                        <p>Hư gì đổi nấy <strong>12 tháng</strong> tại các chi nhánh toàn quốc (miễn phí tháng đầu) <a href="#">Xem chi tiết</a></p>
-                                    </div>
-                                    <div class="item">
-                                        <i class="fas fa-shield-alt"></i>
-                                        <p>Bảo hành <strong>chính hãng điện thoại 18 tháng</strong> tại các trung tâm bảo hành hãng <a href="#">Xem địa chỉ bảo hành</a></p>
-                                    </div>
-                                    <!-- Thêm thông tin giao hàng -->
-                                    <div class="item">
-                                        <i class="fas fa-truck"></i>
-                                        <p>Giao hàng tận nơi <strong>miễn phí</strong> với đơn hàng từ <strong>500.000đ</strong></p>
-                                    </div>
-                                    <!-- Thêm thông tin thanh toán -->
-                                    <div class="item">
-                                        <i class="fas fa-credit-card"></i>
-                                        <p>Hỗ trợ thanh toán: Tiền mặt, chuyển khoản, trả góp 0% qua thẻ tín dụng</p>
-                                    </div>
+                                <div class="product-stock">
+                                    <span>Số lượng sản phẩm trong kho:</span>
+                                    <span class="in-stock"><i class="fas fa-check-circle"></i> <?= $data['SoLuong'] ?></span>
                                 </div>
+                            </div>
 
-                                <div class="list-btn">
-                                    <a href="javascript:void(0);" onclick="checkStockAndAddToCart(<?= $data['MaSP'] ?>, <?= $data['SoLuong'] ?? 0 ?>)">Thêm vào giỏ</a>
-                                    <!-- Thêm nút mua ngay -->
-                                    <a href="javascript:void(0);" onclick="checkStockAndBuyNow(<?= $data['MaSP'] ?>, <?= $data['SoLuong'] ?? 0 ?>)" class="buy-now">Mua ngay</a>
-                                    <?php if ($data['MaDM'] != 2) { ?>
-                                        <a href="#info">Chi tiết</a>
-                                    <?php } ?>
-                                </div>
-                                <p><?= $data['MoTa'] ?></p>
+                            <?php
+                            if (isset($data['MaKM'])) {
+                                require_once("Models/cart.php");
+                                $cartModel = new Cart();
+                                $promotion = $cartModel->get_promotion($data['MaKM']);
+                                $discountValue = isset($promotion['GiaTriKM']) ? $promotion['GiaTriKM'] : 0;
+                                $discountedPrice = $data['DonGia'] - $discountValue;
+                            } else {
+                                $discountValue = 0;
+                                $discountedPrice = $data['DonGia'];
+                            }
+                            ?>
+                            <div class="product-price">
+                                <?php if ($discountValue > 0) : ?>
+                                    <h5 class="current-price"><?= number_format($discountedPrice) ?> VNĐ</h5>
+                                    <p class="original-price"><del><?= number_format($data['DonGia']) ?> VNĐ</del></p>
+                                    <span class="discount-badge">
+                                        -<?= round(($discountValue / $data['DonGia']) * 100) ?>%
+                                    </span>
+                                    <p class="promotion-name"><?= isset($promotion['TenKM']) ? $promotion['TenKM'] : '' ?></p>
+                                <?php else : ?>
+                                    <h4><?= number_format($data['DonGia']) ?> VNĐ</h4>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="list-btn">
+                                <a href="javascript:void(0);" onclick="checkStockAndAddToCart(<?= $data['MaSP'] ?>, <?= $data['SoLuong'] ?? 0 ?>)">Thêm vào giỏ</a>
+                                <!-- Thêm nút mua ngay -->
+                                <a href="javascript:void(0);" onclick="checkStockAndBuyNow(<?= $data['MaSP'] ?>, <?= $data['SoLuong'] ?? 0 ?>)" class="buy-now">Mua ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="product-commnit">
+                            <div class="header">TechNest cam kết</div>
+                            <div class="item">
+                                <i class="fas fa-box"></i>
+                                <p>Bộ sản phẩm gồm: Hộp, sách hướng dẫn, cây lấy sim, ốp lưng, cáp sạc, củ sạc nhanh</p>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-sync-alt"></i>
+                                <p>Hư gì đổi nấy <strong>12 tháng</strong> tại các chi nhánh toàn quốc (miễn phí tháng đầu) <a href="#">Xem chi tiết</a></p>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-shield-alt"></i>
+                                <p>Bảo hành <strong>chính hãng điện thoại 18 tháng</strong> tại các trung tâm bảo hành hãng <a href="#">Xem địa chỉ bảo hành</a></p>
+                            </div>
+                            <!-- Thêm thông tin giao hàng -->
+                            <div class="item">
+                                <i class="fas fa-truck"></i>
+                                <p>Giao hàng tận nơi <strong>miễn phí</strong> với đơn hàng từ <strong>500.000đ</strong></p>
+                            </div>
+                            <!-- Thêm thông tin thanh toán -->
+                            <div class="item">
+                                <i class="fas fa-credit-card"></i>
+                                <p>Hỗ trợ thanh toán: Tiền mặt, chuyển khoản, trả góp 0% qua thẻ tín dụng</p>
                             </div>
                         </div>
                     </div>
@@ -163,7 +160,6 @@
                             <?php if ($data['MaDM'] != 2) { ?>
                                 <div class="info-reviews moreinfo tab-pane fade in active" id="moreinfo">
                                     <div class="tb">
-                                        <h5>Thông số kỹ thuật</h5>
                                         <ul>
                                             <li>
                                                 <span>Màn hình</span>
@@ -226,7 +222,6 @@
                             <!-- Tab mô tả chi tiết -->
                             <div class="info-reviews description tab-pane fade" id="description">
                                 <div class="description-content">
-                                    <h5>Mô tả chi tiết sản phẩm</h5>
                                     <div class="product-desc">
                                         <?php if (isset($data['ChiTiet']) && !empty($data['ChiTiet'])): ?>
                                             <?= $data['ChiTiet'] ?>
@@ -245,13 +240,12 @@
                             <!-- Tab hướng dẫn sử dụng -->
                             <div class="info-reviews usage tab-pane fade" id="usage">
                                 <div class="usage-content">
-                                    <h5>Hướng dẫn sử dụng</h5>
                                     <div class="usage-guide">
                                         <?php if (isset($data['HuongDanSD']) && !empty($data['HuongDanSD'])): ?>
                                             <?= $data['HuongDanSD'] ?>
                                         <?php else: ?>
                                             <div class="guide-item">
-                                                <h6>Cách sử dụng <?= $data['TenSP'] ?></h6>
+                                                <h4>Cách sử dụng <?= $data['TenSP'] ?></h4>
                                                 <ol>
                                                     <li>Sạc đầy pin trước khi sử dụng lần đầu</li>
                                                     <li>Đăng nhập tài khoản để sử dụng đầy đủ tính năng</li>
@@ -260,7 +254,7 @@
                                                 </ol>
                                             </div>
                                             <div class="guide-item">
-                                                <h6>Lưu ý khi sử dụng</h6>
+                                                <h4>Lưu ý khi sử dụng</h4>
                                                 <ol>
                                                     <li>Không để thiết bị tiếp xúc với nước hoặc độ ẩm cao</li>
                                                     <li>Tránh làm rơi hoặc va đập mạnh</li>
@@ -338,17 +332,17 @@
             alert('Sản phẩm hiện đang hết hàng. Vui lòng chọn sản phẩm khác.');
             return false;
         }
-        
+
         window.location.href = `?act=cart&xuli=add&id=${productId}`;
         return true;
     }
-    
+
     function checkStockAndBuyNow(productId, availableStock) {
         if (availableStock <= 0) {
             alert('Sản phẩm hiện đang hết hàng. Vui lòng chọn sản phẩm khác.');
             return false;
         }
-        
+
         window.location.href = `?act=cart&xuli=addnow&id=${productId}`;
         return true;
     }
