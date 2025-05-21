@@ -86,11 +86,15 @@ i {
 	font-size: 16px;
 }
 
+b{
+	font-size: 16px;
+}
+
 p {
 	color: #666666;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 400;
-	line-height: 20px;
+	line-height: 24px;
 }
 
 ul {
@@ -414,7 +418,7 @@ header .parent-active>a {
 .total>span {
 	border-bottom: 2px solid #eeeeee;
 	border-top: 2px solid #eeeeee;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 800;
 	line-height: 58px;
 	text-transform: uppercase;
@@ -432,7 +436,7 @@ header .parent-active>a {
 
 .out-menu {
 	background: #eeeeee none repeat scroll 0 0;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 700;
 	line-height: 40px;
 	margin: 0 50px;
@@ -532,7 +536,7 @@ header.header-one {
 }
 
 .mainmenu li>ul>li>a {
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 1;
 	margin-bottom: 20px;
@@ -577,12 +581,12 @@ header.header-one {
 }
 
 .magamenu h5 {
-	font-size: 15px;
+	font-size: 16px;
 	margin-bottom: 25px;
 }
 
 .mainmenu .magamenu li a {
-	font-size: 14px;
+	font-size: 16px;
 	text-align: center;
 }
 
@@ -671,7 +675,7 @@ header.header-one {
 
 .slide-text p.one-p {
 	color: #666666;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 400;
 }
 
@@ -683,7 +687,7 @@ header.header-one {
 	border: 1px solid #ccc;
 	color: #666;
 	display: inline-block !important;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	line-height: 40px;
 	padding: 0 50px;
@@ -737,7 +741,7 @@ header.header-one {
 .colect-text>a {
 	color: #fe5858;
 	display: inline-block;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 600;
 	margin-top: 10px;
 	padding-bottom: 3px;
@@ -989,7 +993,7 @@ header.header-one {
 
 .single-coming span del {
 	color: #ccc;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 400;
 }
 
@@ -1012,7 +1016,7 @@ header.header-one {
 
 .single-coming ul li span {
 	color: #666;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 500;
 	margin-bottom: 12px;
 	text-transform: uppercase;
@@ -1148,14 +1152,14 @@ header.header-one {
 
 .s-blog-text span a {
 	color: #999;
-	font-size: 12px;
+	font-size: 14px;
 	text-transform: capitalize;
 }
 
 .s-blog-text>span {
 	color: #999;
 	display: inline-block;
-	font-size: 12px;
+	font-size: 14px;
 	margin-bottom: 20px;
 }
 
@@ -1327,7 +1331,7 @@ header.header-one {
 
 .footer-menu a i {
 	color: #999;
-	font-size: 15px;
+	font-size: 16px;
 	margin-right: 8px;
 	position: relative;
 	top: 1px;
@@ -1666,7 +1670,7 @@ header.header-one.header-page {
 
 .about-text>p {
 	margin-top: 25px;
-	font-size: 15px;
+	font-size: 16px;
 }
 
 .about-text>li {
@@ -1730,7 +1734,7 @@ header.header-one.header-page {
 }
 
 .pagnation-ul a {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 50px;
 	padding: 0 5px;
 }
@@ -1820,7 +1824,7 @@ header.header-one.header-page {
 }
 
 .share-tag h5 {
-	font-size: 13px;
+	font-size: 16px;
 	margin: 0;
 	padding: 3px 0;
 	font-weight: 500;
@@ -1833,7 +1837,7 @@ header.header-one.header-page {
 
 .author-des>h4 a {
 	display: inline-block;
-	font-size: 13px;
+	font-size: 16px;
 	margin-bottom: 0;
 	font-weight: 800;
 	color: #333;
@@ -1914,7 +1918,7 @@ header.header-one.header-page {
 }
 
 .recent-post h5 {
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 400;
 	margin-bottom: 5px;
 }
@@ -2075,7 +2079,7 @@ header.header-one.header-page {
 	border: 0 none;
 	color: #fff;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 35px;
 	padding: 0 30px;
 	margin-right: 7px;
@@ -2228,7 +2232,7 @@ table tbody i.mdi-close:hover {
 
 .list-text {
 	background: #fff none repeat scroll 0 0;
-	padding: 30px;
+	padding: 20px;
 }
 
 .list-text>h3 {
@@ -2278,7 +2282,7 @@ table tbody i.mdi-close:hover {
 	background: linear-gradient(to right, #00bfff, #1e90ff);
 	color: #fff;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 35px;
 	padding: 0 30px;
 	margin-right: 7px;
@@ -2300,7 +2304,7 @@ table thead tr th,
 }
 
 .items-dsc h5 a {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 }
 
@@ -2310,7 +2314,7 @@ table tbody .plus-minus a {
 }
 
 .pages table tbody tr td {
-	font-size: 14px;
+	font-size: 16px;
 	padding: 20px 0;
 }
 
@@ -2460,7 +2464,7 @@ tbody .td-img a img {
 
 .custom-input input::placeholder {
 	color: #888;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .submit-text {
@@ -2788,10 +2792,6 @@ tbody .td-img a img {
 	margin-top: 30px;
 }
 
-.product-details .list-text {
-	padding: 50px;
-}
-
 .product-details .list-text>h5 del {
 	font-size: 18px;
 }
@@ -2803,7 +2803,7 @@ tbody .td-img a img {
 
 .s-shoose h5 {
 	float: left;
-	font-size: 13px;
+	font-size: 16px;
 	width: 80px;
 	margin: 0;
 	line-height: 30px;
@@ -2859,7 +2859,7 @@ tbody .td-img a img {
 .size-drop .btn {
 	background: transparent none repeat scroll 0 0;
 	border-radius: 0;
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 25px;
 	margin-bottom: 0;
 	margin-right: 5px;
@@ -2870,7 +2870,7 @@ tbody .td-img a img {
 
 .size-drop .dropdown-menu {
 	border-radius: 0;
-	font-size: 13px;
+	font-size: 16px;
 	margin: -1px 0;
 	min-width: 90px;
 }
@@ -3017,7 +3017,7 @@ tbody .td-img a img {
 }
 
 .single-contact>p {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 /*-------------------------------------
@@ -3032,7 +3032,7 @@ tbody .td-img a img {
 }
 
 .error-content>p {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	letter-spacing: 2px;
 	margin-bottom: 40px;
@@ -3092,7 +3092,7 @@ tbody .td-img a img {
 	width: 40%;
 	vertical-align: top;
 	padding: 5px 0;
-	font-size: 14px;
+	font-size: 16px;
 	color: #666;
 }
 
@@ -3101,7 +3101,7 @@ tbody .td-img a img {
 	width: auto;
 	vertical-align: top;
 	padding: 6px 5px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #333;
 }
 
@@ -3174,7 +3174,7 @@ tbody .td-img a img {
 }
 
 .product-dsc>span {
-	font-size: 14px;
+	font-size: 16px;
 	color: #666;
 }
 
@@ -3193,18 +3193,26 @@ tbody .td-img a img {
 	top: 10px;
 	right: 10px;
 	padding: 5px 10px;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 /* Chi tiết style cho badge giảm giá trong trang chi tiết sản phẩm */
 .discount-badge {
 	padding: 3px 8px;
 	margin-left: 10px;
-	font-size: 14px;
+	font-size: 16px;
+}
+
+.guide-item li{
+	font-size: 16px;
+}
+
+.product-meta span {
+	font-size: 16px;
 }
 
 /* Style chung cho hiển thị giá */
-.product-price-list, .product-price {
+.product-price-list {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -3229,7 +3237,7 @@ tbody .td-img a img {
 /* Style cho giá gốc (gạch ngang) */
 .original-price {
 	color: #666;
-	font-size: 13px;
+	font-size: 16px;
 	margin-bottom: 5px;
 }
 
@@ -3237,7 +3245,7 @@ tbody .td-img a img {
 .discount-percent, .discount-percent-banner {
 	background-color: #f44336;
 	color: #fff;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 2px 5px;
 	border-radius: 3px;
@@ -3246,7 +3254,7 @@ tbody .td-img a img {
 
 /* Style riêng cho banner */
 .discount-percent-banner {
-	font-size: 14px;
+	font-size: 16px;
 	padding: 3px 8px;
 	display: inline-block;
 }
@@ -3256,13 +3264,13 @@ tbody .td-img a img {
 	color: #4CAF50;
 	font-weight: bold;
 	margin-top: 5px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 /* Style trong giỏ hàng */
 .original-price-cart {
 	color: #666;
-	font-size: 13px;
+	font-size: 16px;
 	display: block;
 }
 
@@ -3274,7 +3282,7 @@ tbody .td-img a img {
 .discount-badge-cart {
 	background-color: #f44336;
 	color: #fff;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 2px 5px;
 	border-radius: 3px;
@@ -3353,14 +3361,14 @@ tbody .td-img a img {
 	padding: 3px 8px;
 	border-radius: 3px;
 	margin-left: 10px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .promotion-name {
 	color: #4CAF50;
 	font-weight: bold;
 	margin-top: 5px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .list-btn {
@@ -3379,7 +3387,6 @@ tbody .td-img a img {
 .product-commnit {
 	border: 1px solid #eee;
 	border-radius: 5px;
-	padding: 15px;
 	margin: 15px 0;
 	background-color: #f9f9f9;
 }
@@ -3404,6 +3411,7 @@ tbody .td-img a img {
 }
 
 .product-commnit .item p {
+	font-size: 16px;
 	margin: 0;
 }
 
@@ -3430,7 +3438,7 @@ tbody .td-img a img {
 	background-color: #f44336;
 	color: white;
 	padding: 5px 10px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	border-radius: 3px;
 	z-index: 1;
@@ -3439,7 +3447,7 @@ tbody .td-img a img {
 .discount-percent {
 	background-color: #f44336;
 	color: #fff;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 2px 5px;
 	border-radius: 3px;

@@ -9,7 +9,7 @@ class VNPayConfig
     const VNPAY_URL = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html'; // Sandbox environment
     // const VNPAY_URL = 'https://pay.vnpay.vn/vpcpay.html'; // Production environment
     
-    const VNPAY_RETURN_URL = 'http://localhost/technest/?act=checkout&xuli=vnpay_return';
+    const VNPAY_RETURN_URL = 'http://technest.test/?act=checkout&xuli=vnpay_return';
     
     // VNPay parameters
     const VNP_VERSION = '2.1.0';

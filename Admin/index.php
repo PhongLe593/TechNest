@@ -197,6 +197,9 @@ if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) {
                 case 'xetduyet':
                     $controller_obj->xetduyet();
                     break;
+                case 'printInvoice':
+                    $controller_obj->printInvoice();
+                    break;
                 default:
                     $controller_obj->list();
                     break;
@@ -309,6 +312,9 @@ if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) {
                         break;
                     case 'xetduyet':
                         $controller_obj->xetduyet();
+                        break;
+                    case 'printInvoice':
+                        $controller_obj->printInvoice();
                         break;
                     default:
                         $controller_obj->list();

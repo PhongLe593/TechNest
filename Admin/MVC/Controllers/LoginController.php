@@ -28,6 +28,22 @@ class LoginController
         $data_nguoidung = $this->login_model->tk_nguoidung(1);
 
         $data_nhanvien = $this->login_model->tk_nguoidung(3);
+        
+        // Handle date range filter for statistics
+        if(isset($_POST['filter_stats'])) {
+            $start_date = $_POST['start_date'];
+            $end_date = $_POST['end_date'];
+            
+            // Validate dates
+            if(!empty($start_date) && !empty($end_date)) {
+                $stats_data = $this->login_model->tk_date_range($start_date, $end_date);
+                
+                $period_orders = $stats_data['period_orders'];
+                $period_revenue = $stats_data['period_revenue'];
+                $daily_stats = $stats_data['daily_stats'];
+            }
+        }
+        
         require_once("MVC/Views/Admin/index.php");
     }
 }

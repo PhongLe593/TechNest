@@ -9,36 +9,38 @@
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
-      <th scope="col">Tên khách hàng</th>
-      <th scope="col">Ngày đặt hàng</th>
-      <th scope="col">Sản phẩm</th>
-      <th scope="col">Tổng tiền</th>
+      <th scope="col">Mã đơn</th>
+      <th scope="col">Ngày đặt</th>
+      <th scope="col">Khách hàng</th>
       <th scope="col">Địa chỉ</th>
       <th scope="col">SĐT</th>
+      <th scope="col">Phương thức</th>
+      <th scope="col">Tổng tiền</th>
       <th scope="col">Trạng thái</th>
-      <th scope="col">Thanh toán</th>
       <th scope="col">Thao tác</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($data as $row) { ?>
       <tr>
-        <td><?= $row['NguoiNhan'] ?></td>
+        <td><?= $row['MaHD'] ?></td>
         <td><?= $row['NgayLap'] ?></td>
-        <td><?= strlen($row['Products']) > 30 ? substr($row['Products'], 0, 27) . '...' : $row['Products'] ?></td>
-        <td><?= number_format($row['TongTien']) ?>VNĐ</td>
+        <td><?= $row['NguoiNhan'] ?></td>
         <td><?= $row['DiaChi'] ?></td>
         <td><?= $row['SDT'] ?></td>
+        <td><?= $row['PhuongThuc'] ?></td>
+        <td><?= number_format($row['TongTien']) ?>VNĐ</td>
         <td><?php if ($row['TrangThai'] == 0) {
               echo 'Chưa xét duyệt';
             } else {
               echo 'Đã xét duyệt';
             }
             ?></td>
-        <td><?= $row['PhuongThuc'] ?></td>
         <td>
           <a href="?mod=hoadon&act=chitiet&id=<?= $row['MaHD'] ?>" class="btn btn-success">Xem chi tiết</a>
-          <a href="?mod=hoadon&act=delete&id=<?= $row['MaHD'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
+          <?php if ($row['TrangThai'] == 0) { ?>
+            <a href="?mod=hoadon&act=delete&id=<?= $row['MaHD'] ?>" onclick="return confirm('Bạn có thật sự muốn hủy đơn hàng này? Số lượng sản phẩm sẽ được hoàn trả.');" type="button" class="btn btn-danger">Hủy đơn</a>
+          <?php } ?>
         </td>
       </tr>
     <?php } ?>
